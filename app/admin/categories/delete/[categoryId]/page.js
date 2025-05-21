@@ -33,7 +33,7 @@ export default function DeleteCategoryPage() {
   return (
     <Layout>
       <h1 className="text-center">
-        are you sure want to delete Category "{categoryInfo?.name}" ?
+        are you sure want to delete Category &quot;{categoryInfo?.name}&quot; ?
       </h1>
       <div className="flex gap-2 justify-center">
         <button className="btn-danger" onClick={deleteCategory}>

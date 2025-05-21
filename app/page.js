@@ -21,7 +21,7 @@ export default function Home() {
       <div>
         <Slider autoSlide={true}>
           {images.map((each) => (
-            <img src= {each}/>
+            <img key={each} src={each} />
           ))}
         </Slider>
       </div>

@@ -1,12 +1,11 @@
-
-import Slider from '@/app/components/Slider';
-import BannerPromotion from '@/app/components/BannerPromotion';
-import WhyUs from '@/app/components/WhyUs';
-import Category from '@/app/components/Category';
-import Brands from '@/app/components/Brands';
-import Contact from '@/app/components/Contact';
-import FeedbackForm from '@/app/components/FeedbackForm';
-import Footer from '@/app/components/Footer';
+import Slider from "@/app/components/Slider";
+import BannerPromotion from "@/app/components/BannerPromotion";
+import WhyUs from "@/app/components/WhyUs";
+import Category from "@/app/components/Category";
+import Brands from "@/app/components/Brands";
+import Contact from "@/app/components/Contact";
+import FeedbackForm from "@/app/components/FeedbackForm";
+import Footer from "@/app/components/Footer";
 
 const images = [
   "images/jumbotron-1.png",
@@ -21,12 +20,12 @@ export default function Home() {
     <main>
       <div>
         <Slider autoSlide={true}>
-          {images.map((each) => (
-            <img src= {each}/>
+          {images.map((each, index) => (
+            <img key={index} src={each} alt={`Slide ${index + 1}`} />
           ))}
         </Slider>
       </div>
-      <BannerPromotion/>
+      <BannerPromotion />
       <WhyUs />
       <Category />
       <Brands />

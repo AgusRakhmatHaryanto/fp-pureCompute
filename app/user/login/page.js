@@ -95,23 +95,23 @@ const LoginPage = () => {
               />
             </div>
 
-              <div className="flex items-center mb-4">
-                <input
-                  type="checkbox"
-                  id="showPassword"
-                  className="mr-2"
-                  name="showPassword"
-                  checked={showPassword}
-                  onChange={() => setShowPassword(!showPassword)}
-                />
-                <label
-                  htmlFor="showPassword"
-                  className=" text-sm font-medium text-gray-600"
-                  style={{ color: "#488BA8" }}
-                >
-                  Show Password
-                </label>
-              </div>
+            <div className="flex items-center mb-4">
+              <input
+                type="checkbox"
+                id="showPassword"
+                className="mr-2"
+                name="showPassword"
+                checked={showPassword}
+                onChange={() => setShowPassword(!showPassword)}
+              />
+              <label
+                htmlFor="showPassword"
+                className=" text-sm font-medium text-gray-600"
+                style={{ color: "#488BA8" }}
+              >
+                Show Password
+              </label>
+            </div>
             <button
               type="submit"
               className="w-full bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-md focus:outline-none focus:ring focus:border-blue-300 font-bold font-poppins"
@@ -135,7 +135,7 @@ const LoginPage = () => {
 
           <div className="text-center mt-2 font-poppins">
             <p>
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <a
                 href="/user/signup"
                 className="font-regular hover:underline"
