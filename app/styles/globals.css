@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --main: #488BA8;
+    --white: "#FFFFFF",
+    --black: "#1E1E1E",
+    --light: "#E4E7E9"
+}
+
+
+@layer components {
+    
+
+    .nav-link:hover {
+        color: var(--main);
+        transition: all 0.4s;
+    }
+
+    .nav-link::after {
+        position: absolute;
+        content: "";
+        background-color: var(--main);
+        height: 3px;
+        width:100%;
+        bottom:-5px;
+        left: 0;
+        scale: 0;
+        transform-origin: left;
+        transition: all 0.4s;
+    }
+
+    .nav-link:hover::after {
+        scale: 1;
+    }
+
+    .icon-why {
+        content: "";
+        color: var(--main);
+        width: 50px;
+        height: 50px;
+        margin-right: 25px;
+        clear: both;
+        display: table;
+    }
+
+    .brand-logo {
+        border: 10px;
+        color: green;
+    }
+    
+}
+
+
+h1{
+    @apply text-xl text-[#488BA8] font-semibold mb-2;
+}
+
+input, textarea{
+    @apply border-2 border-gray-200 rounded-md p-2 w-full;
+    @apply mb-2
+}
+
+input:focus{
+    @apply border-2 border-yellow-300;
+}
+
+label{
+    @apply text-sm text-[#488BA8]
+}
+
+.btn-primary{
+    @apply bg-[#488BA8] text-white px-4 py-2 rounded-md mt-4
+}
+.btn-danger{
+    @apply bg-red-500 text-white px-4 py-2 rounded-md mt-4
+}
+
+table {
+    @apply w-full border-collapse mt-8;
+}
+
+th,
+td {
+    @apply border border-gray-200 p-4 text-left;
+}
+
+th {
+    @apply bg-main text-white;
+}
