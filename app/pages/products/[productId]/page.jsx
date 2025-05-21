@@ -28,7 +28,10 @@ export default function ProductDetail(context) {
         //   `http://localhost:3000/api/v1/products/${encodedProductId}`
         // );
         // setProductDetails(response.data);
-        setProductDetails(dummyProducts);
+              const foundProduct = dummyProducts.find(
+          (product) => product.id === productId
+        );
+        setProductDetails(foundProduct || {});
       } catch (error) {
         console.error("Error fetching product:", error);
       }
